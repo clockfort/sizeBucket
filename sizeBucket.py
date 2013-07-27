@@ -29,12 +29,6 @@ def files(directory, numBuckets):
 	for name in os.listdir(directory):
 		bucketize(directory, name, numBuckets);
 
-def size(filename):
-	if os.path.isdir(name):
-		size = directorySize(name)
-	elif os.path.isfile(name):
-		size = os.path.getsize(name)
-
 def bucketize(directory, filename, numBuckets):
 	os.symlink( os.path.join(directory, filename), os.path.join(topBucket(numBuckets), filename))
 
